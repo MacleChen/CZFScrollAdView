@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		67FBB32523974BFB0007EF7E /* CZFScrollAdView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FBB31B23974BFB0007EF7E /* CZFScrollAdView.framework */; };
+		67FBB32A23974BFB0007EF7E /* CZFScrollAdViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FBB32923974BFB0007EF7E /* CZFScrollAdViewTests.m */; };
+		67FBB32C23974BFB0007EF7E /* CZFScrollAdView.h in Headers */ = {isa = PBXBuildFile; fileRef = 67FBB31E23974BFB0007EF7E /* CZFScrollAdView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67FBB33723974EE60007EF7E /* CZFScrollAdShowView.h in Headers */ = {isa = PBXBuildFile; fileRef = 67FBB33523974EE60007EF7E /* CZFScrollAdShowView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67FBB33823974EE60007EF7E /* CZFScrollAdShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FBB33623974EE60007EF7E /* CZFScrollAdShowView.m */; };
+		67FBB37F239783EF0007EF7E /* CZFScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 67FBB37D239783EF0007EF7E /* CZFScrollView.h */; };
+		67FBB380239783EF0007EF7E /* CZFScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FBB37E239783EF0007EF7E /* CZFScrollView.m */; };
+		67FBB383239784180007EF7E /* CZFPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 67FBB381239784180007EF7E /* CZFPageControl.h */; };
+		67FBB384239784180007EF7E /* CZFPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FBB382239784180007EF7E /* CZFPageControl.m */; };
+		67FBB3882397B7A00007EF7E /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FBB3862397B7A00007EF7E /* UIView+Extension.m */; };
+		67FBB3892397B7A00007EF7E /* UIView+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 67FBB3872397B7A00007EF7E /* UIView+Extension.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67FBB32623974BFB0007EF7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67FBB31223974BFB0007EF7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67FBB31A23974BFB0007EF7E;
+			remoteInfo = CZFScrollAdView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		67FBB31B23974BFB0007EF7E /* CZFScrollAdView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CZFScrollAdView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67FBB31E23974BFB0007EF7E /* CZFScrollAdView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZFScrollAdView.h; sourceTree = "<group>"; };
+		67FBB31F23974BFB0007EF7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67FBB32423974BFB0007EF7E /* CZFScrollAdViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CZFScrollAdViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67FBB32923974BFB0007EF7E /* CZFScrollAdViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZFScrollAdViewTests.m; sourceTree = "<group>"; };
+		67FBB32B23974BFB0007EF7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67FBB33523974EE60007EF7E /* CZFScrollAdShowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZFScrollAdShowView.h; sourceTree = "<group>"; };
+		67FBB33623974EE60007EF7E /* CZFScrollAdShowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZFScrollAdShowView.m; sourceTree = "<group>"; };
+		67FBB37D239783EF0007EF7E /* CZFScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZFScrollView.h; sourceTree = "<group>"; };
+		67FBB37E239783EF0007EF7E /* CZFScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZFScrollView.m; sourceTree = "<group>"; };
+		67FBB381239784180007EF7E /* CZFPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZFPageControl.h; sourceTree = "<group>"; };
+		67FBB382239784180007EF7E /* CZFPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZFPageControl.m; sourceTree = "<group>"; };
+		67FBB3862397B7A00007EF7E /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		67FBB3872397B7A00007EF7E /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67FBB31823974BFB0007EF7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67FBB32123974BFB0007EF7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67FBB32523974BFB0007EF7E /* CZFScrollAdView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67FBB31123974BFB0007EF7E = {
+			isa = PBXGroup;
+			children = (
+				67FBB31D23974BFB0007EF7E /* CZFScrollAdView */,
+				67FBB32823974BFB0007EF7E /* CZFScrollAdViewTests */,
+				67FBB31C23974BFB0007EF7E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		67FBB31C23974BFB0007EF7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67FBB31B23974BFB0007EF7E /* CZFScrollAdView.framework */,
+				67FBB32423974BFB0007EF7E /* CZFScrollAdViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67FBB31D23974BFB0007EF7E /* CZFScrollAdView */ = {
+			isa = PBXGroup;
+			children = (
+				67FBB3852397B6EF0007EF7E /* libs */,
+				67FBB31E23974BFB0007EF7E /* CZFScrollAdView.h */,
+				67FBB31F23974BFB0007EF7E /* Info.plist */,
+				67FBB33523974EE60007EF7E /* CZFScrollAdShowView.h */,
+				67FBB33623974EE60007EF7E /* CZFScrollAdShowView.m */,
+				67FBB37D239783EF0007EF7E /* CZFScrollView.h */,
+				67FBB37E239783EF0007EF7E /* CZFScrollView.m */,
+				67FBB381239784180007EF7E /* CZFPageControl.h */,
+				67FBB382239784180007EF7E /* CZFPageControl.m */,
+			);
+			path = CZFScrollAdView;
+			sourceTree = "<group>";
+		};
+		67FBB32823974BFB0007EF7E /* CZFScrollAdViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				67FBB32923974BFB0007EF7E /* CZFScrollAdViewTests.m */,
+				67FBB32B23974BFB0007EF7E /* Info.plist */,
+			);
+			path = CZFScrollAdViewTests;
+			sourceTree = "<group>";
+		};
+		67FBB3852397B6EF0007EF7E /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				67FBB3872397B7A00007EF7E /* UIView+Extension.h */,
+				67FBB3862397B7A00007EF7E /* UIView+Extension.m */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		67FBB31623974BFB0007EF7E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67FBB3892397B7A00007EF7E /* UIView+Extension.h in Headers */,
+				67FBB37F239783EF0007EF7E /* CZFScrollView.h in Headers */,
+				67FBB33723974EE60007EF7E /* CZFScrollAdShowView.h in Headers */,
+				67FBB32C23974BFB0007EF7E /* CZFScrollAdView.h in Headers */,
+				67FBB383239784180007EF7E /* CZFPageControl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		67FBB31A23974BFB0007EF7E /* CZFScrollAdView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67FBB32F23974BFB0007EF7E /* Build configuration list for PBXNativeTarget "CZFScrollAdView" */;
+			buildPhases = (
+				67FBB31623974BFB0007EF7E /* Headers */,
+				67FBB31723974BFB0007EF7E /* Sources */,
+				67FBB31823974BFB0007EF7E /* Frameworks */,
+				67FBB31923974BFB0007EF7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CZFScrollAdView;
+			productName = CZFScrollAdView;
+			productReference = 67FBB31B23974BFB0007EF7E /* CZFScrollAdView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		67FBB32323974BFB0007EF7E /* CZFScrollAdViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67FBB33223974BFB0007EF7E /* Build configuration list for PBXNativeTarget "CZFScrollAdViewTests" */;
+			buildPhases = (
+				67FBB32023974BFB0007EF7E /* Sources */,
+				67FBB32123974BFB0007EF7E /* Frameworks */,
+				67FBB32223974BFB0007EF7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67FBB32723974BFB0007EF7E /* PBXTargetDependency */,
+			);
+			name = CZFScrollAdViewTests;
+			productName = CZFScrollAdViewTests;
+			productReference = 67FBB32423974BFB0007EF7E /* CZFScrollAdViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67FBB31223974BFB0007EF7E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "陈帆";
+				TargetAttributes = {
+					67FBB31A23974BFB0007EF7E = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					67FBB32323974BFB0007EF7E = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 67FBB31523974BFB0007EF7E /* Build configuration list for PBXProject "CZFScrollAdView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 67FBB31123974BFB0007EF7E;
+			productRefGroup = 67FBB31C23974BFB0007EF7E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67FBB31A23974BFB0007EF7E /* CZFScrollAdView */,
+				67FBB32323974BFB0007EF7E /* CZFScrollAdViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67FBB31923974BFB0007EF7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67FBB32223974BFB0007EF7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67FBB31723974BFB0007EF7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67FBB33823974EE60007EF7E /* CZFScrollAdShowView.m in Sources */,
+				67FBB380239783EF0007EF7E /* CZFScrollView.m in Sources */,
+				67FBB3882397B7A00007EF7E /* UIView+Extension.m in Sources */,
+				67FBB384239784180007EF7E /* CZFPageControl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67FBB32023974BFB0007EF7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67FBB32A23974BFB0007EF7E /* CZFScrollAdViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67FBB32723974BFB0007EF7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67FBB31A23974BFB0007EF7E /* CZFScrollAdView */;
+			targetProxy = 67FBB32623974BFB0007EF7E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		67FBB32D23974BFB0007EF7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		67FBB32E23974BFB0007EF7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		67FBB33023974BFB0007EF7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = EDA8EGULN6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CZFScrollAdView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jointsky.CZFScrollAdView;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		67FBB33123974BFB0007EF7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = EDA8EGULN6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CZFScrollAdView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jointsky.CZFScrollAdView;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		67FBB33323974BFB0007EF7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EDA8EGULN6;
+				INFOPLIST_FILE = CZFScrollAdViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jointsky.CZFScrollAdViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		67FBB33423974BFB0007EF7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EDA8EGULN6;
+				INFOPLIST_FILE = CZFScrollAdViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jointsky.CZFScrollAdViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67FBB31523974BFB0007EF7E /* Build configuration list for PBXProject "CZFScrollAdView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67FBB32D23974BFB0007EF7E /* Debug */,
+				67FBB32E23974BFB0007EF7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67FBB32F23974BFB0007EF7E /* Build configuration list for PBXNativeTarget "CZFScrollAdView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67FBB33023974BFB0007EF7E /* Debug */,
+				67FBB33123974BFB0007EF7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67FBB33223974BFB0007EF7E /* Build configuration list for PBXNativeTarget "CZFScrollAdViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67FBB33323974BFB0007EF7E /* Debug */,
+				67FBB33423974BFB0007EF7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67FBB31223974BFB0007EF7E /* Project object */;
+}
