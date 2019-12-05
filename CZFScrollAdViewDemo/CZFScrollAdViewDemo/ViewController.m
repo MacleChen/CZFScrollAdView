@@ -13,7 +13,7 @@
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
-@interface ViewController ()
+@interface ViewController ()<CZFScrollAdShowViewDelegate>
 
 @end
 
@@ -38,9 +38,29 @@
                               ];
     
     CZFScrollAdShowView *adView = [[CZFScrollAdShowView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, 200) images:imagesArray2 placeholderImage:@"ad_default" isAutoScroll:true];
-    [adView setPageControlPositionType:PageControlPositionTypeBottomRight];
+    adView.delegate = self;
+    [adView setPageControlPositionType:PageControlPositionTypeBottomCenter];
+    [adView setAutoScrollImageTimeValue:1]; // auto time
     [adView setImageMode:UIViewContentModeScaleAspectFill];
     [self.view addSubview:adView];
+}
+
+#pragma mark - CZFScrollAdShowViewDelegate
+#pragma mark
+- (void)scrollAdShowView:(CZFScrollAdShowView *)adShoView didImageViewClick:(UIImageView *)imageView index:(NSInteger)imageIndex {
+    [self showAlertView:[NSString stringWithFormat:@"%ld", imageIndex] message:nil];
+}
+
+- (void)showAlertView:(NSString *)title message:(NSString *)message {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title
+                                                                             message:message
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"确定"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction * _Nonnull action) {
+    }]];
+    
+    [self presentViewController:alertController animated:true completion:nil];
 }
 
 

@@ -40,6 +40,24 @@ typedef NS_ENUM(NSInteger, PageControlPositionType) {
     PageControlPositionTypeBottomCenter
 };
 
+@class CZFScrollAdShowView;
+
+@protocol CZFScrollAdShowViewDelegate <NSObject>
+
+@optional
+
+/**
+ image view click
+
+ @param adShoView self
+ @param imageView iamgeView
+ @param imageIndex index
+ */
+- (void)scrollAdShowView:(CZFScrollAdShowView *)adShoView didImageViewClick:(UIImageView *)imageView
+                   index:(NSInteger)imageIndex;
+
+@end
+
 @interface CZFScrollAdShowView : UIView
 
 /**
@@ -57,6 +75,11 @@ typedef NS_ENUM(NSInteger, PageControlPositionType) {
  set page control postion type
  */
 @property(nonatomic, readwrite, assign) PageControlPositionType PageControlPositionType;
+
+/**
+ delegate
+ */
+@property(nonatomic, weak) id<CZFScrollAdShowViewDelegate> delegate;
 
 /**
  get scroll image view

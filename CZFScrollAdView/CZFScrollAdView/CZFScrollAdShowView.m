@@ -140,6 +140,9 @@
     CGRect imageViewFrame = CGRectMake(0, 0, CGRectGetWidth(self.scrollView.frame), CGRectGetWidth(self.scrollView.frame));
     // scrollview is the first imageView add the last image url
     UIImageView *firstImageView = [[UIImageView alloc] initWithFrame:imageViewFrame];
+    [firstImageView setUserInteractionEnabled:true];
+    firstImageView.tag = imgsArray.count - 1;
+    [firstImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollImageViewClick:)]];
     NSString *lastImageUrl = imgsArray.lastObject;
     if ([lastImageUrl hasPrefix:@"http"]) {
         // web image
@@ -154,7 +157,9 @@
     for (int i = 0; i < imgsArray.count; i++) {
         NSString *imageUrl = imgsArray[i];
         UIImageView *showImageView = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.scrollView.frame)*(i+1), CGRectGetMinY(imageViewFrame), CGRectGetWidth(imageViewFrame), CGRectGetHeight(imageViewFrame))];
+        [showImageView setUserInteractionEnabled:true];
         showImageView.tag = i;
+        [showImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollImageViewClick:)]];
         if ([imageUrl hasPrefix:@"http"]) {
             // web image
             [showImageView showWebImageWithUrl:imageUrl placeholderImage:localImage];
@@ -166,6 +171,9 @@
     }
     // Add the last position imageview to scrollview that the first image url
     UIImageView *lastImageView = [[UIImageView alloc] initWithFrame:CGRectMake((imgsArray.count + 1) * CGRectGetWidth(self.scrollView.frame), CGRectGetMinY(imageViewFrame), CGRectGetWidth(imageViewFrame), CGRectGetHeight(imageViewFrame))];
+    [lastImageView setUserInteractionEnabled:true];
+    lastImageView.tag = 0;
+    [lastImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollImageViewClick:)]];
     NSString *firstImageUrl = imgsArray.firstObject;
     if ([firstImageUrl hasPrefix:@"http"]) {
         // web image
@@ -197,6 +205,13 @@
         self.pageControl.currentPage = offsetX / CGRectGetWidth(self.scrollView.frame);
     }
     [self.scrollView setContentOffset:CGPointMake(offsetX + CGRectGetWidth(self.scrollView.frame), 0) animated:true];
+}
+
+- (void)scrollImageViewClick:(UITapGestureRecognizer *)gesture {
+    NSLog(@"image click index:%ld", gesture.view.tag);
+    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(scrollAdShowView:didImageViewClick:index:)]) {
+        [self.delegate scrollAdShowView:self didImageViewClick:(UIImageView *)gesture.view index:gesture.view.tag];
+    }
 }
 
 #pragma mark - Delegate
