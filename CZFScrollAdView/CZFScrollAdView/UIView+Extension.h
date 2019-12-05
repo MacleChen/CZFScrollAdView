@@ -26,7 +26,7 @@
 /**
  *  remove all subviews
  */
-- (void)mj_removeAllSubviews;
+- (void)removeAllSubviews;
 
 
 @end

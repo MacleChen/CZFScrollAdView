@@ -156,7 +156,7 @@
 /**
  *  remove all subviews
  */
-- (void)mj_removeAllSubviews {
+- (void)removeAllSubviews {
     NSArray *arraySubviews = [self subviews];
     for (UIView *viewTemp in arraySubviews) {
         [viewTemp removeFromSuperview];

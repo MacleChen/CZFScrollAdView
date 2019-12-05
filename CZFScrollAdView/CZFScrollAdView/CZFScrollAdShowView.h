@@ -12,12 +12,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- 轮播图片的样式
+ scroll image type
  
- - ScrollAdViewFullWidth: 轮播图片和宽度相等
- - ScrollAdViewHasGap: 轮播图片右间距
- - ScrollAdViewTypeAnimationOne: 轮播图片特殊动画1
- - ScrollAdViewTypeAnimationTwo: 轮播图片特殊动画2
+ - ScrollAdViewFullWidth: scroll image full width
+ - ScrollAdViewHasGap: scroll image has gap
+ - ScrollAdViewTypeAnimationOne: scroll iamge special animate one
+ - ScrollAdViewTypeAnimationTwo: scroll iamge special animate two
  */
 typedef NS_ENUM(NSInteger, ScrollAdViewType) {
     ScrollAdViewFullWidth,
@@ -28,11 +28,11 @@ typedef NS_ENUM(NSInteger, ScrollAdViewType) {
 
 
 /**
- 轮播分页时，按钮的位置
+ scroll bottom pageControl position type
  
- - PageControlPositionTypeBottomLeft: 底部靠左
- - PageControlPositionTypeBottomRight: 底部靠右
- - PageControlPositionTypeBottomCenter: 底部中心
+ - PageControlPositionTypeBottomLeft: bottom left
+ - PageControlPositionTypeBottomRight: bottom right
+ - PageControlPositionTypeBottomCenter: bottom center
  */
 typedef NS_ENUM(NSInteger, PageControlPositionType) {
     PageControlPositionTypeBottomLeft,
@@ -42,28 +42,33 @@ typedef NS_ENUM(NSInteger, PageControlPositionType) {
 
 @interface CZFScrollAdShowView : UIView
 
-+ (void)showMyAge;
-
-+ (UIView *)getRedView;
+/**
+ content mode
+ */
+@property(nonatomic, readwrite, assign) UIViewContentMode imageMode;
 
 /**
- 获取轮播图片View
+ auto scroll image
+ * default: 3s
+ */
+@property(nonatomic, readwrite, assign) NSInteger autoScrollImageTimeValue;
+
+/**
+ set page control postion type
+ */
+@property(nonatomic, readwrite, assign) PageControlPositionType PageControlPositionType;
+
+/**
+ get scroll image view
  
- @param frame 布局frame
- @param imagesArray 图片数组，可以是本地，也可以是web链接，但不能是混着链接
- @param placeholderImage 展位图片，本地地址
- @return view对象
+ @param frame :layout or position frame
+ @param imagesArray :images array, local images or web iamges
+ @param placeholderImage :default placeholder image
+ @param isAuto :auto scroll image
+ @return view :instance
  */
 - (instancetype)initWithFrame:(CGRect)frame images:(NSArray<NSString *> *)imagesArray
-             placeholderImage:(NSString *)placeholderImage;
-
-/**
- 设置pageControl的位置类型
- 
- @param pageType 类型
- */
-- (void)setPageControlPositionType:(PageControlPositionType)pageType;
-
+             placeholderImage:(NSString *)placeholderImage isAutoScroll:(BOOL)isAuto;
 @end
 
 NS_ASSUME_NONNULL_END
