@@ -135,6 +135,23 @@
     }
 }
 
+/**
+ auto scroll image is suspend
+ */
+- (void)suspendScrollImage {
+    if (self.timer) {
+        [self.timer invalidate];
+        self.timer = nil;
+    }
+}
+
+/**
+ auto scroll image is resume
+ */
+- (void)resumeScrollImage {
+    [self setAutoScrollImageTimeValue:_scrollTimeValue];
+}
+
 #pragma mark private
 - (void)setScrollImages:(NSArray<NSString *> *)imgsArray placeImage:(NSString *)localImage {
     CGRect imageViewFrame = CGRectMake(0, 0, CGRectGetWidth(self.scrollView.frame), CGRectGetWidth(self.scrollView.frame));
@@ -237,8 +254,10 @@
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    [self.timer invalidate];
-    self.timer = nil;
+    if (self.timer) {
+        [self.timer invalidate];
+        self.timer = nil;
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

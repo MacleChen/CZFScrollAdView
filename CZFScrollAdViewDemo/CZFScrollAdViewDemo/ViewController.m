@@ -15,6 +15,8 @@
 
 @interface ViewController ()<CZFScrollAdShowViewDelegate>
 
+@property(nonatomic, weak) CZFScrollAdShowView *adShowView;
+
 @end
 
 @implementation ViewController
@@ -38,6 +40,7 @@
                               ];
     
     CZFScrollAdShowView *adView = [[CZFScrollAdShowView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, 200) images:imagesArray2 placeholderImage:@"ad_default" isAutoScroll:true];
+    self.adShowView = adView;
     adView.delegate = self;
     [adView setPageControlPositionType:PageControlPositionTypeBottomCenter];
     [adView setAutoScrollImageTimeValue:1]; // auto time
@@ -45,10 +48,25 @@
     [self.view addSubview:adView];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    // 恢复
+    [self.adShowView resumeScrollImage];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    // 挂起
+    [self.adShowView suspendScrollImage];
+}
+
 #pragma mark - CZFScrollAdShowViewDelegate
-#pragma mark
+#pragma mark didImageViewClick
 - (void)scrollAdShowView:(CZFScrollAdShowView *)adShoView didImageViewClick:(UIImageView *)imageView index:(NSInteger)imageIndex {
-    [self showAlertView:[NSString stringWithFormat:@"%ld", imageIndex] message:nil];
+//    [self showAlertView:[NSString stringWithFormat:@"%ld", imageIndex] message:nil];
+    [self performSegueWithIdentifier:@"nextStep" sender:nil];
 }
 
 - (void)showAlertView:(NSString *)title message:(NSString *)message {

@@ -92,6 +92,17 @@ typedef NS_ENUM(NSInteger, PageControlPositionType) {
  */
 - (instancetype)initWithFrame:(CGRect)frame images:(NSArray<NSString *> *)imagesArray
              placeholderImage:(NSString *)placeholderImage isAutoScroll:(BOOL)isAuto;
+
+/**
+ auto scroll image is suspend
+ */
+- (void)suspendScrollImage;
+
+/**
+ auto scroll image is resume
+ */
+- (void)resumeScrollImage;
+
 @end
 
 NS_ASSUME_NONNULL_END

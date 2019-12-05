@@ -21,9 +21,45 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="自动真无限轮播图" id="bVf-mb-X1y"/>
+                    <connections>
+                        <segue destination="Q47-D3-d1o" kind="show" identifier="nextStep" id="RdH-Nx-4t1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="143" y="124"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Hal-Pk-xfu">
+            <objects>
+                <viewController id="Q47-D3-d1o" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ygx-1g-TOt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Te5-OZ-emK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Te5-OZ-emK" firstAttribute="top" secondItem="Ygx-1g-TOt" secondAttribute="top" id="1Ua-LD-iCW"/>
+                            <constraint firstItem="Te5-OZ-emK" firstAttribute="leading" secondItem="eqw-fR-6BU" secondAttribute="leading" id="G4N-Yu-wja"/>
+                            <constraint firstItem="Te5-OZ-emK" firstAttribute="trailing" secondItem="eqw-fR-6BU" secondAttribute="trailing" id="QPu-At-13s"/>
+                            <constraint firstItem="Te5-OZ-emK" firstAttribute="bottom" secondItem="eqw-fR-6BU" secondAttribute="bottom" id="yzH-N7-vwx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eqw-fR-6BU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="180-xm-Ud3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OXw-R7-YRP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840.79999999999995" y="123.68815592203899"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="x0U-a0-EYm">
