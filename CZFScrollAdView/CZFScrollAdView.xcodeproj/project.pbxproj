@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67AA993D2399FA2F002732B7 /* CZFImageCaches.h in Headers */ = {isa = PBXBuildFile; fileRef = 67AA993B2399FA2F002732B7 /* CZFImageCaches.h */; };
+		67AA993E2399FA2F002732B7 /* CZFImageCaches.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AA993C2399FA2F002732B7 /* CZFImageCaches.m */; };
 		67DBE9FC2398A878002498BE /* UIImageView+CZFShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DBE9FA2398A878002498BE /* UIImageView+CZFShow.m */; };
 		67DBE9FD2398AEDA002498BE /* UIImageView+CZFShow.h in Headers */ = {isa = PBXBuildFile; fileRef = 67DBE9F92398A878002498BE /* UIImageView+CZFShow.h */; };
 		67FBB32523974BFB0007EF7E /* CZFScrollAdView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FBB31B23974BFB0007EF7E /* CZFScrollAdView.framework */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		67AA993B2399FA2F002732B7 /* CZFImageCaches.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZFImageCaches.h; sourceTree = "<group>"; };
+		67AA993C2399FA2F002732B7 /* CZFImageCaches.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZFImageCaches.m; sourceTree = "<group>"; };
 		67DBE9F92398A878002498BE /* UIImageView+CZFShow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CZFShow.h"; sourceTree = "<group>"; };
 		67DBE9FA2398A878002498BE /* UIImageView+CZFShow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CZFShow.m"; sourceTree = "<group>"; };
 		67FBB31B23974BFB0007EF7E /* CZFScrollAdView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CZFScrollAdView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +124,8 @@
 				67FBB3862397B7A00007EF7E /* UIView+Extension.m */,
 				67DBE9F92398A878002498BE /* UIImageView+CZFShow.h */,
 				67DBE9FA2398A878002498BE /* UIImageView+CZFShow.m */,
+				67AA993B2399FA2F002732B7 /* CZFImageCaches.h */,
+				67AA993C2399FA2F002732B7 /* CZFImageCaches.m */,
 			);
 			name = libs;
 			sourceTree = "<group>";
@@ -133,6 +139,7 @@
 			files = (
 				67FBB3892397B7A00007EF7E /* UIView+Extension.h in Headers */,
 				67FBB37F239783EF0007EF7E /* CZFScrollView.h in Headers */,
+				67AA993D2399FA2F002732B7 /* CZFImageCaches.h in Headers */,
 				67DBE9FD2398AEDA002498BE /* UIImageView+CZFShow.h in Headers */,
 				67FBB33723974EE60007EF7E /* CZFScrollAdShowView.h in Headers */,
 				67FBB32C23974BFB0007EF7E /* CZFScrollAdView.h in Headers */,
@@ -240,6 +247,7 @@
 				67DBE9FC2398A878002498BE /* UIImageView+CZFShow.m in Sources */,
 				67FBB380239783EF0007EF7E /* CZFScrollView.m in Sources */,
 				67FBB3882397B7A00007EF7E /* UIView+Extension.m in Sources */,
+				67AA993E2399FA2F002732B7 /* CZFImageCaches.m in Sources */,
 				67FBB384239784180007EF7E /* CZFPageControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

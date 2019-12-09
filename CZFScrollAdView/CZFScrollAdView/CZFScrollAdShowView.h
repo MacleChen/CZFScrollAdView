@@ -103,6 +103,11 @@ typedef NS_ENUM(NSInteger, PageControlPositionType) {
  */
 - (void)resumeScrollImage;
 
+/**
+ remove iamges from disk
+ */
+- (void)removeImagesFromDisk;
+
 @end
 
 NS_ASSUME_NONNULL_END

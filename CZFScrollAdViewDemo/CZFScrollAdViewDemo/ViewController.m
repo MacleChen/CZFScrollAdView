@@ -43,10 +43,15 @@
     self.adShowView = adView;
     adView.delegate = self;
     [adView setPageControlPositionType:PageControlPositionTypeBottomCenter];
-    [adView setAutoScrollImageTimeValue:1]; // auto time
+    [adView setAutoScrollImageTimeValue:2]; // auto time
     [adView setImageMode:UIViewContentModeScaleAspectFill];
     [self.view addSubview:adView];
 }
+
+- (IBAction)clearCachesBtnClick:(id)sender {
+    [self.adShowView removeImagesFromDisk];
+}
+
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];

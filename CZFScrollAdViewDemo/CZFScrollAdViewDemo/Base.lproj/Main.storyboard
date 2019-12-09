@@ -17,7 +17,27 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPY-fq-oGt">
+                                <rect key="frame" x="94" y="583" width="186" height="30"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.56862745100000001" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4zE-L8-FEQ"/>
+                                </constraints>
+                                <state key="normal" title="清除磁盘缓存">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCachesBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u2j-sV-eyU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kPY-fq-oGt" secondAttribute="trailing" constant="95" id="KzN-Mt-YPq"/>
+                            <constraint firstItem="kPY-fq-oGt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="W99-Zv-voX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kPY-fq-oGt" secondAttribute="bottom" constant="54" id="m3f-r8-jb9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="自动真无限轮播图" id="bVf-mb-X1y"/>
@@ -27,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="143" y="124"/>
+            <point key="canvasLocation" x="141.59999999999999" y="123.68815592203899"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Hal-Pk-xfu">

@@ -12,6 +12,7 @@
 #import "CZFPageControl.h"
 #import "UIView+Extension.h"
 #import "UIImageView+CZFShow.h"
+#import "CZFImageCaches.h"
 
 @interface CZFScrollAdShowView() <UIScrollViewDelegate> {
     CGFloat _currentOffsetX;
@@ -21,6 +22,7 @@
 
 @property(nonatomic, weak) CZFScrollView *scrollView;
 @property(nonatomic, weak) CZFPageControl *pageControl;
+@property(nonatomic, copy) NSArray<NSString *> *imagesArray;
 @property(nonatomic, strong) NSTimer *timer;
 
 @end
@@ -51,6 +53,7 @@
         // init
         _currentOffsetX = 0;
         _scrollTimeValue = 3;
+        self.imagesArray = imagesArray;
         
         // scrollview
         CZFScrollView *scrollView = [[CZFScrollView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(frame), CGRectGetHeight(frame))];
@@ -150,6 +153,15 @@
  */
 - (void)resumeScrollImage {
     [self setAutoScrollImageTimeValue:_scrollTimeValue];
+}
+
+/**
+ remove iamges from disk
+ */
+- (void)removeImagesFromDisk {
+    for (NSString *imageUrl in self.imagesArray) {
+        [CZFImageCaches removeImageFromDisk:imageUrl];
+    }
 }
 
 #pragma mark private
