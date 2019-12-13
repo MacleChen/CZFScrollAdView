@@ -39,10 +39,16 @@
                               @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575523901257&di=c6b899be6c6b623b36a49d23f310a522&imgtype=0&src=http%3A%2F%2Fpic29.nipic.com%2F20130512%2F8786105_134147897000_2.jpg",
                               ];
     
+    NSArray *textArray = @[@"欢乐的小树林哈哈哈",
+                           @"凶猛的大老虎",
+                           @"温柔的大熊猫",
+                           @"细心认真的小松鼠"];
+    
     CZFScrollAdShowView *adView = [[CZFScrollAdShowView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, 200) images:imagesArray2 placeholderImage:@"ad_default" isAutoScroll:true];
     self.adShowView = adView;
     adView.delegate = self;
-    [adView setPageControlPositionType:PageControlPositionTypeBottomCenter];
+    [adView setScrollViewBottomText:textArray];
+    [adView setPageControlPositionType:PageControlPositionTypeBottomRight];
     [adView setAutoScrollImageTimeValue:2]; // auto time
     [adView setImageMode:UIViewContentModeScaleAspectFill];
     [self.view addSubview:adView];
@@ -84,6 +90,12 @@
     }]];
     
     [self presentViewController:alertController animated:true completion:nil];
+}
+
+
+// 单元测试的方法
+- (NSString *)calculateYuanToFen:(NSString *)yuanStr {
+    return [NSString stringWithFormat:@"%.0f", [yuanStr floatValue] * 100];
 }
 
 

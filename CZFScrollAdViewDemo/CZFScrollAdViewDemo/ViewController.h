@@ -11,6 +11,7 @@
 
 @interface ViewController : UIViewController
 
-
+// 单元测试的方法
+- (NSString *)calculateYuanToFen:(NSString *)yuanStr;
 @end
 

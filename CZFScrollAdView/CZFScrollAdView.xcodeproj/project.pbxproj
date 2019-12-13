@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6728E9EE23A23C3C0053D275 /* UIImageView+CZFShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DBE9FA2398A878002498BE /* UIImageView+CZFShow.m */; };
+		6728E9EF23A23C3F0053D275 /* CZFImageCaches.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AA993C2399FA2F002732B7 /* CZFImageCaches.m */; };
+		6728E9F023A23C410053D275 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FBB3862397B7A00007EF7E /* UIView+Extension.m */; };
 		67AA993D2399FA2F002732B7 /* CZFImageCaches.h in Headers */ = {isa = PBXBuildFile; fileRef = 67AA993B2399FA2F002732B7 /* CZFImageCaches.h */; };
 		67AA993E2399FA2F002732B7 /* CZFImageCaches.m in Sources */ = {isa = PBXBuildFile; fileRef = 67AA993C2399FA2F002732B7 /* CZFImageCaches.m */; };
 		67DBE9FC2398A878002498BE /* UIImageView+CZFShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DBE9FA2398A878002498BE /* UIImageView+CZFShow.m */; };
@@ -35,8 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6728E9F223A246B70053D275 /* CZFScrollAdShowView+test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CZFScrollAdShowView+test.h"; sourceTree = "<group>"; };
 		67AA993B2399FA2F002732B7 /* CZFImageCaches.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CZFImageCaches.h; sourceTree = "<group>"; };
 		67AA993C2399FA2F002732B7 /* CZFImageCaches.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CZFImageCaches.m; sourceTree = "<group>"; };
+		67CEC7EB23A336D500DE99AB /* CZFImageCaches+test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CZFImageCaches+test.h"; sourceTree = "<group>"; };
 		67DBE9F92398A878002498BE /* UIImageView+CZFShow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CZFShow.h"; sourceTree = "<group>"; };
 		67DBE9FA2398A878002498BE /* UIImageView+CZFShow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CZFShow.m"; sourceTree = "<group>"; };
 		67FBB31B23974BFB0007EF7E /* CZFScrollAdView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CZFScrollAdView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +118,8 @@
 			children = (
 				67FBB32923974BFB0007EF7E /* CZFScrollAdViewTests.m */,
 				67FBB32B23974BFB0007EF7E /* Info.plist */,
+				6728E9F223A246B70053D275 /* CZFScrollAdShowView+test.h */,
+				67CEC7EB23A336D500DE99AB /* CZFImageCaches+test.h */,
 			);
 			path = CZFScrollAdViewTests;
 			sourceTree = "<group>";
@@ -257,6 +264,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				67FBB32A23974BFB0007EF7E /* CZFScrollAdViewTests.m in Sources */,
+				6728E9EF23A23C3F0053D275 /* CZFImageCaches.m in Sources */,
+				6728E9F023A23C410053D275 /* UIView+Extension.m in Sources */,
+				6728E9EE23A23C3C0053D275 /* UIImageView+CZFShow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

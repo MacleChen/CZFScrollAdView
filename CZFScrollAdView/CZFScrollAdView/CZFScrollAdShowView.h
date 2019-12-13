@@ -108,6 +108,13 @@ typedef NS_ENUM(NSInteger, PageControlPositionType) {
  */
 - (void)removeImagesFromDisk;
 
+/**
+ set bottom text array
+ 
+ @param textArray textArray
+ */
+- (void)setScrollViewBottomText:(NSArray *)textArray;
+
 @end
 
 NS_ASSUME_NONNULL_END

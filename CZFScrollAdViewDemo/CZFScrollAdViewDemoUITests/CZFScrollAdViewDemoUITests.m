@@ -8,6 +8,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <CZFScrollAdView/CZFScrollAdView.h>
+#import "ViewController.h"
 
 @interface CZFScrollAdViewDemoUITests : XCTestCase
 
@@ -25,6 +27,18 @@
     [[[XCUIApplication alloc] init] launch];
 
     // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+}
+
+#pragma mark 测试  按钮点击
+- (void)testMainViewBtnClick {
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.buttons[@"清除磁盘缓存"] tap];
+    
+}
+
+- (void)testClearDiskBtn {
+    
 }
 
 - (void)tearDown {

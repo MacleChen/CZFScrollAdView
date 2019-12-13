@@ -9,7 +9,11 @@
 
 #import <XCTest/XCTest.h>
 
+#import "ViewController.h"
+
 @interface CZFScrollAdViewDemoTests : XCTestCase
+
+@property (nonatomic, strong) ViewController *testVC;
 
 @end
 
@@ -17,10 +21,19 @@
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.testVC = [[ViewController alloc] init];
 }
+
+- (void)testDataDeal {
+    
+    // 测试金钱转换方法
+    XCTAssertEqualObjects([self.testVC calculateYuanToFen:@"12"], @"1200");
+}
+
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
+    self.testVC = nil;
 }
 
 - (void)testExample {

@@ -11,6 +11,7 @@
 #import <CommonCrypto/CommonCrypto.h>
 
 #define MAX_FILE_EXTENSION_LENGTH 300
+#define APP_INFO_DICT  [[NSBundle mainBundle] infoDictionary]
 
 @implementation CZFImageCaches
 
@@ -21,9 +22,21 @@
  @return absolute path
  */
 + (NSString *)getAbsoluteImageCachePath:(NSString *)imageName {
+    NSString *appPackageName = [APP_INFO_DICT objectForKey:@"CFBundleIdentifier"];
+    
     NSString *md5ImageName = [self cachedFileNameForKey:imageName];
     NSString *adShowImageDiskPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, true) firstObject];
-    adShowImageDiskPath = [adShowImageDiskPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", md5ImageName]];
+    NSString *adShowImageDiskDir = [adShowImageDiskPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@/CZFAdShowImages/", appPackageName]];
+    adShowImageDiskPath = [adShowImageDiskDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", md5ImageName]];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:adShowImageDiskDir]) {
+        NSError *error;
+        [fileManager createDirectoryAtPath:adShowImageDiskDir withIntermediateDirectories:YES attributes:nil error:&error];
+        if (error) {
+            NSLog(@"create directory error:%@", error.description);
+        }
+    }
     
     return adShowImageDiskPath;
 }

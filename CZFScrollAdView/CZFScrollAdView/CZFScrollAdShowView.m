@@ -22,7 +22,9 @@
 
 @property(nonatomic, weak) CZFScrollView *scrollView;
 @property(nonatomic, weak) CZFPageControl *pageControl;
+@property(nonatomic, weak) UILabel *textLabel;
 @property(nonatomic, copy) NSArray<NSString *> *imagesArray;
+@property(nonatomic, copy) NSArray<NSString *> *textArray;
 @property(nonatomic, strong) NSTimer *timer;
 
 @end
@@ -62,7 +64,7 @@
         self.scrollView.showsVerticalScrollIndicator = false;
         self.scrollView.showsHorizontalScrollIndicator = false;
         self.scrollView.delegate = self;
-        scrollView.backgroundColor = [UIColor grayColor];
+        scrollView.backgroundColor = [UIColor whiteColor];
         [self setScrollImages:imagesArray placeImage:placeholderImage];
         
         // page control
@@ -73,8 +75,17 @@
         // default bottom center
         pageControl.center = CGPointMake(self.scrollView.center.x, self.scrollView.center.y + CGRectGetHeight(self.scrollView.frame)/2 - 20);
         
+        // text Label
+        UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(frame) - 40, CGRectGetWidth(frame), 40)];
+        self.textLabel = textLabel;
+        textLabel.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+        textLabel.textColor = [UIColor whiteColor];
+        textLabel.font = [UIFont systemFontOfSize:14.0];
+        textLabel.hidden = true;
+        
         [self addSubview:scrollView];
         [self addSubview:pageControl];
+        [self addSubview:textLabel];
         [self bringSubviewToFront:pageControl];
         
         // auto scroll image view
@@ -92,6 +103,7 @@
  @param imageMode imageMode
  */
 - (void)setImageMode:(UIViewContentMode)imageMode {
+    _imageMode = imageMode;
     for (UIImageView *imageView in self.scrollView.subviews) {
         imageView.contentMode = imageMode;
         imageView.clipsToBounds = true; // clips bound out image section
@@ -109,6 +121,7 @@
         self.timer = nil;
     }
     _scrollTimeValue = autoScrollImageTimeValue;
+    _autoScrollImageTimeValue = autoScrollImageTimeValue;
     self.timer = [NSTimer scheduledTimerWithTimeInterval:_scrollTimeValue
                                                   target:self
                                                 selector:@selector(timerRunLoop:)
@@ -124,6 +137,7 @@
  @param pageType page type
  */
 - (void)setPageControlPositionType:(PageControlPositionType)pageType {
+    _PageControlPositionType = pageType;
     CGFloat pageControlWidth = 15 * self.pageControl.numberOfPages;
     switch (pageType) {
         case PageControlPositionTypeBottomLeft:
@@ -162,6 +176,21 @@
     for (NSString *imageUrl in self.imagesArray) {
         [CZFImageCaches removeImageFromDisk:imageUrl];
     }
+}
+
+/**
+ set bottom text array
+
+ @param textArray textArray
+ */
+- (void)setScrollViewBottomText:(NSArray *)textArray {
+    if (textArray == nil || textArray.count != self.imagesArray.count) {
+        NSLog(@"data is nil or data count incorrect");
+        return;
+    }
+    self.textArray = textArray;
+    self.textLabel.hidden = false;
+    self.textLabel.text = [NSString stringWithFormat:@"  %@", self.textArray[self.pageControl.currentPage]];
 }
 
 #pragma mark private
@@ -234,6 +263,11 @@
         self.pageControl.currentPage = offsetX / CGRectGetWidth(self.scrollView.frame);
     }
     [self.scrollView setContentOffset:CGPointMake(offsetX + CGRectGetWidth(self.scrollView.frame), 0) animated:true];
+    
+    // set bottom text
+    if (self.imagesArray != nil) {
+        self.textLabel.text = [NSString stringWithFormat:@"  %@", self.textArray[self.pageControl.currentPage]];
+    }
 }
 
 - (void)scrollImageViewClick:(UITapGestureRecognizer *)gesture {
@@ -259,6 +293,11 @@
     }
     scrollView.scrollEnabled = true;
     [self setAutoScrollImageTimeValue:_scrollTimeValue];
+    
+    // set bottom text
+    if (self.imagesArray != nil) {
+        self.textLabel.text = [NSString stringWithFormat:@"  %@", self.textArray[self.pageControl.currentPage]];
+    }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
